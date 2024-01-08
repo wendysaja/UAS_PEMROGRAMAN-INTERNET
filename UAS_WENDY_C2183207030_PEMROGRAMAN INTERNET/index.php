@@ -7,7 +7,7 @@
     <!-- Tambahkan link CSS atau style inline sesuai kebutuhan -->
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -16,31 +16,54 @@
         header {
             background-color: #333;
             color: #fff;
-            padding: 10px;
+            padding: 20px;
             text-align: center;
         }
 
         nav {
-            background-color: #eee;
-            padding: 10px;
+            background-color: #4CAF50;
+            padding: 15px 0;
             text-align: center;
         }
 
         nav a {
-            margin: 0 10px;
+            margin: 0 15px;
             text-decoration: none;
-            color: #333;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ddd;
         }
 
         section {
-            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Perpustakaan</h1>
+        <h1>PERPUSTAKAAN WENDY</h1>
     </header>
 
     <nav>
