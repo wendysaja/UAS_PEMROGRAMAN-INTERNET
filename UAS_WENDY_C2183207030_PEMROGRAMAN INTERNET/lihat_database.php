@@ -1,7 +1,7 @@
 <?php
 $host = 'localhost'; 
 $username = 'root'; 
-$password = ''; // 
+$password = ''; 
 $database = 'nama_database'; 
 
 
@@ -34,7 +34,7 @@ $result = $conn->query($query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perpustakaan Wendy Wildany</title>
     <style>
-        body {
+         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
             margin: 0;
@@ -71,8 +71,8 @@ $result = $conn->query($query);
         section {
             max-width: 800px;
             margin: 20px auto;
-            background-color: #fff;
             padding: 20px;
+            background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -90,7 +90,7 @@ $result = $conn->query($query);
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: #28a745; /* Warna biru muda */
         }
 
         .action-buttons {
@@ -98,7 +98,7 @@ $result = $conn->query($query);
             gap: 5px;
         }
 
-        .edit-button, .hapus-button {
+        .edit-button, .hapus-button, .detail-button {
             padding: 8px 16px;
             text-decoration: none;
             color: #fff;
@@ -111,15 +111,19 @@ $result = $conn->query($query);
         }
 
         .edit-button {
-            background-color: #4CAF50;
+            background-color: #007BFF; /* Warna biru */
         }
 
         .hapus-button {
-            background-color: #f44336;
+            background-color: #dc3545; /* Warna merah */
         }
 
-        .edit-button:hover, .hapus-button:hover {
-            background-color: #333;
+        .detail-button {
+            background-color: #28a745; /* Warna hijau */
+        }
+
+        .edit-button:hover, .hapus-button:hover, .detail-button:hover {
+            background-color: #0056b3; /* Warna biru tua saat hover */
         }
     </style>
 </head>
@@ -159,6 +163,7 @@ $result = $conn->query($query);
                     echo "<td class='action-buttons'>";
                     echo "<a href='edit_data.php?id=" . $row['id'] . "' class='edit-button'>Edit</a>";
                     echo "<a href='lihat_database.php?action=hapus&id=" . $row['id'] . "' class='hapus-button'>Hapus</a>";
+                    echo "<a href='detail_buku.php?id=" . $row['id'] . "' class='detail-button'>Detail</a>";
                     echo "</td>";
                     echo "</tr>";
                 }
